@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Audio Lessons — Study Hub</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="wrap">
+
+            <a class="brand" href="index.html">
+                📚 Study Hub
+            </a>
+
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="flashcards.html">Flashcards</a>
+                <a href="audio.html" class="active">Audio</a>
+                <a href="materials.html">Materials</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <main class="wrap">
+
+        <h1>Audio Lessons</h1>
+
+        <p class="lead">
+            Select English or Sinhala audio lessons.
+        </p>
+        <div
+            class="deck-picker"
+            id="audio-language-picker">
+        </div>
+
+        <div class="audio-list" id="audio-list">
+            <p class="empty">Loading audio lessons...</p>
+        </div>
+
+    </main>
+
+    <script src="app.js"></script>
+
+    <script>
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+            window.StudyHub.renderAudio();
+            }
+        );
+    </script>
+
+</body>
+
+</html>
