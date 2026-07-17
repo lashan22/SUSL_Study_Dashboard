@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SUSL Study Hub — Dashboard</title>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f4f6f9;
+        }
+
+        header {
+            background: #152a46;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(250px, 1fr)
+            );
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px
+                        rgba(0, 0, 0, 0.1);
+        }
+
+        .button {
+            display: inline-block;
+            background: #eb258b;
+            color: white;
+            padding: 10px 16px;
+            margin-top: 10px;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        audio {
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+        }
+    </style>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">📚 Study Hub</a>
+      <nav class="nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="flashcards.html">Flashcards</a>
+        <a href="audio.html">Audio</a>
+        <a href="materials.html">Materials</a>
+      </nav>
+    </div>
+  </header>
+ 
+  <main class="wrap">
+    <section class="hero">
+      <h1>SUSL MIT Study Dashboard</h1>
+      <p class="lead">A shareable dashboard for flashcards, audio lessons, and study materials.
+        Everything lives in this repo — edit the JSON files in <code>data/</code> to add your own content.</p>
+    </section>
+ 
+    <section class="cards" id="dashboard-cards">
+
+    <!-- Flashcards Card -->
+    <a class="card" href="flashcards.html">
+
+        <div class="card-icon">🧠</div>
+
+        <h2>Flashcards</h2>
+
+        <p>
+            Flip-card decks to test recall.
+        </p>
+
+        <span class="count"
+              data-count="flashcards">
+            —
+        </span>
+
+    </a>
+
+    <!-- Audio Card -->
+    <a class="card" href="audio.html">
+
+        <div class="card-icon">🎧</div>
+
+        <h2>Audio</h2>
+
+        <p>
+            Listen to recorded lessons and notes.
+        </p>
+
+        <span class="count"
+              data-count="audio">
+            —
+        </span>
+
+    </a>
+
+    <!-- Materials Card -->
+    <a class="card" href="materials.html">
+
+        <div class="card-icon">📄</div>
+
+        <h2>Materials</h2>
+
+        <p>
+            PDFs, slides, and reference docs.
+        </p>
+
+        <span class="count"
+              data-count="materials">
+            —
+        </span>
+
+    </a>
+
+    </section>
+ 
+    <section class="howto">
+
+    <h2>How to add your own content</h2>
+
+    <ol>
+        <li>
+            Add flashcards by editing
+            <code>data/flashcards.json</code>.
+        </li>
+
+        <li>
+            Drop audio files into
+            <code>audio/</code>
+            and list them in
+            <code>data/audio.json</code>.
+        </li>
+
+        <li>
+            Drop PDFs and images into
+            <code>material/</code>
+            and list them in
+            <code>data/materials.json</code>.
+        </li>
+
+        <li>
+            Commit &amp; push — GitHub Pages updates automatically.
+            Share your link!
+        </li>
+    </ol>
+
+</section>
+  </main>
+ 
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Built with GitHub Pages · <a href="https://github.com" id="repo-link">View on GitHub</a></p>
+    </div>
+  </footer>
+ 
+  <script src="app.js"></script>
+  <script>
+    document.addEventListener(
+        "DOMContentLoaded",
+        function () {
+            StudyHub.renderCounts();
+        }
+    );
+</script>
+</body>
+</html>

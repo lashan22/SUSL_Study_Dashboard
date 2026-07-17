@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Flashcards — Study Hub</title>
+
+    <!-- style.css is in the main folder -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Decorative background -->
+    <div class="stars"></div>
+    <div class="stars2"></div>
+    <div class="stars3"></div>
+
+    <div class="blobs">
+        <span class="blob b1"></span>
+        <span class="blob b2"></span>
+        <span class="blob b3"></span>
+        <span class="blob b4"></span>
+    </div>
+
+    <header class="site-header">
+
+        <div class="wrap">
+
+            <a class="brand" href="index.html">
+                📚 Study Hub
+            </a>
+
+            <nav class="nav">
+
+                <a href="index.html">
+                    <span class="ico">🏠</span>
+                    Home
+                </a>
+
+                <a href="flashcards.html"
+                   class="active">
+
+                    <span class="ico">🧠</span>
+                    Flashcards
+                </a>
+
+                <a href="audio.html">
+                    <span class="ico">🎧</span>
+                    Audio
+                </a>
+
+                <a href="materials.html">
+                    <span class="ico">📄</span>
+                    Materials
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+    <main class="wrap">
+
+        <h1>Flashcards</h1>
+
+        <p>
+            Click a flashcard to see the answer.
+            Click it again to return to the question.
+        </p>
+
+        <!-- Subject/deck buttons appear here -->
+        <div class="deck-picker" id="deck-picker"></div>
+
+        <!-- Selected subject flashcards appear here -->
+        <div class="flashcard-grid" id="flashcard-grid">
+            <p class="empty">Loading flashcards...</p>
+        </div>
+
+    </main>
+
+    <footer class="site-footer">
+
+        <div class="wrap">
+            <p>Built with GitHub Pages</p>
+        </div>
+
+    </footer>
+
+    <!-- app.js is in the main folder -->
+    <script src="app.js"></script>
+
+    <script>
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+                if (
+                    window.StudyHub &&
+                    typeof StudyHub.renderFlashcards ===
+                    "function"
+                ) {
+                    StudyHub.renderFlashcards();
+                } else {
+                    document.getElementById(
+                        "flashcard-grid"
+                    ).innerHTML = `
+                        <p class="error">
+                            app.js could not be loaded.
+                        </p>
+                    `;
+                }
+            }
+        );
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+
+[
+  {
+    "name": "MIT 212 - Programming Techniques",
+    "cards": [
+      { "front": "1. What is the formal definition of programming?", "back": "The art of giving precise, step-by-step instructions to a computer to solve a problem." },
+      { "front": "2. In the context of problem-solving, what is an algorithm?", "back": "A step-by-step recipe for solving a specific task." },
+      { "front": "3. How does an algorithm differ from a program?", "back": "An algorithm is language-independent logic, whereas a program is that logic written in a specific language like Python." },
+      { "front": "4. Which translation method converts an entire program into machine code before running it?", "back": "A compiler." },
+      { "front": "5. How does an interpreter process source code?", "back": "It translates and runs the code line-by-line." },
+      { "front": "6. Which translation method is utilized by the Python programming language?", "back": "Interpreter." },
+      { "front": "7. What are two browser-based environments that allow Python coding without local installation?", "back": "Google Colab and Replit." },
+      { "front": "8. What is the primary function of the `print()` statement in Python?", "back": "It displays whatever is inside the parentheses onto the screen." },
+      { "front": "9. How does Python interpret the statement `print(\"5 + 3\")`?", "back": "It treats the content as literal text." },
+      { "front": "10. What is the output of the Python statement `print(5 + 3)`?", "back": "8" },
+      { "front": "11. Python's requirement that `print` must be lowercase and not `Print` is an example of _____ sensitivity.", "back": "case" },
+      { "front": "12. What common syntax error occurs when a programmer starts a string with a quote but fails to end it?", "back": "A missing quote error." },
+      { "front": "13. What are the four basic data types mentioned in Python programming?", "back": "Strings, Integers, Floats, and Booleans." },
+      { "front": "14. Which Python function is used to capture data provided by the user?", "back": "The `input()` function." },
+      { "front": "15. What does 'Control Flow' allow a programmer to do?", "back": "Change the order in which code lines are executed based on conditions." },
+      { "front": "16. In an `if` statement, what symbol must follow the condition line??", "back": "A colon (:)." },
+      { "front": "17. How does Python group blocks of code, such as those under an `if` statement?", "back": "By using indentation (spaces)." },
+      { "front": "18. Which keyword is used to check a secondary condition only if the first `if` condition was False?", "back": "The `elif` statement." },
+      { "front": "19. The `else` statement is executed only when _____.", "back": "all preceding `if` and `elif` conditions are False." },
+      { "front": "20. Which type of loop is most appropriate when the number of iterations is known in advance??", "back": "A `for` loop." },
+      { "front": "21. What is the primary function of a `while` loop?", "back": "To repeat code as long as a specific condition remains True." },
+      { "front": "22. A `for` loop is generally used to iterate over _____", "back": "sequences." },
+      { "front": "23. What is a common risk when a programmer forgets to update the condition variable inside a `while` loop?", "back": "The creation of an infinite loop." },
+      { "front": "24. In Python, the modulo expression i % 2 == 0 is used to determine if a number is _____.", "back": "Even." },
+      { "front": "25. What is the 'machine' analogy for a Python function?", "back": "It takes inputs, performs a process, and gives an output." },
+      { "front": "26. How does a function promote 'modularity' in code?", "back": "By breaking large problems into small, manageable, named pieces." },
+      { "front": "27. What is the benefit of 'reusability' when using functions?", "back": "The ability to write code once and use it many times across different files." },
+      { "front": "28. What happens to the 'scope' of a variable created inside a function?", "back": "It remains local to that function and cannot be accessed outside of it." },
+      { "front": "29. What does a Python interpreter usually provide in an error message to assist with debugging?", "back": "The specific line number where the error occurred." },
+      { "front": "30. What is 'Rubber Duck Debugging'?", "back": "The process of explaining your code line-by-line to an object or friend to find logic errors." },
+      { "front": "31. In the 'FizzBuzz' logic, what is printed if a number is a multiple of both 3 and 5?", "back": "FizzBuzz" },
+      { "front": "32. What is the result of using a single wrong space in Python code?", "back": "An indentation error." },
+      { "front": "33. Which loop type is described as having a 'cleaner syntax' that is 'hard to mess up'?", "back": "The `for` loop." },
+      { "front": "34. What is the purpose of the `elif` keyword in a multi-way branch?", "back": "To provide additional conditions to check if previous ones failed." },
+      { "front": "35. In the grade calculation example, what score range results in a 'Pass'?", "back": "50 to 74." },
+      { "front": "36. How is a 'Boolean' data type defined?", "back": "A data type that can only hold one of two values: True or False." },
+      { "front": "37. In arithmetic operators, what does the symbol `$*$` represent?", "back": "Multiplication." },
+      { "front": "38. What is the first step in the 'Making Tea' algorithm described in the source?", "back": "Water reaches its boiling point at 100 degrees Celsius." },
+      { "front": "39. Why is 'readability' considered a benefit of using named functions?", "back": "It makes the code easier for others to understand by describing what the code block does." },
+      { "front": "40. What does Python do when it encounters an error in the middle of a program?", "back": "It stops and tells the user exactly where it got confused." },
+      { "front": "41. The instructions given to a computer must be _____ and _____.", "back": "precise; step-by-step" },
+      { "front": "42. Is a flowchart considered an algorithm or a program?", "back": "An algorithm." },
+      { "front": "43. What does the `print()` function do if given a mathematical expression without quotes?", "back": "It performs the calculation and displays the result." },
+      { "front": "44. What term describes the logic of 'if', 'elif', and 'else' statements?", "back": "Conditional logic." },
+      { "front": "45. In a `while` loop, the condition is checked _____ each iteration.", "back": "before" },
+      { "front": "46. Functions allow a developer to _____ a block of code to make it reusable.", "back": "name" },
+      { "front": "47. Which arithmetic operator is used for subtraction in Python?", "back": "The minus sign (−)." },
+      { "front": "48. True or False: Python requires precise indentation to run correctly.", "back": "True." },
+      { "front": "49. What is the primary drawback of using a `while` loop compared to a `for` loop?", "back": "It requires careful manual updating of the condition to avoid infinite loops." },
+      { "front": "50. Which concept describes the ability to define a task once and call it multiple times?", "back": "Reusability." },
+      { "front": "51. In the source material, 'ASCII Art' is suggested as a task to practice what?", "back": "Multiple `print()` statements." },
+      { "front": "52. What is the result of using 'primt' instead of 'print' in Python?", "back": "A typing error (NameError)." },
+      { "front": "53. If a student wants to check if a year is a leap year, what programming structure is most necessary?", "back": "A function with conditional logic." },
+      { "front": "54. In the analogy provided, a compiler is like translating a _____.", "back": "whole book" },
+      { "front": "55. In the analogy provided, an interpreter is like a _____.", "back": "live speech translator" }
+
+
+
+    ]
+  },
+  {
+    "name": "MIT 219 - Integrative Programming and Technologies",
+    "cards": [
+      { "front": "Hello", "back": "SUSL" },
+      { "front": "Thank you", "back": "Medical Faculty" },
+      { "front": "Good morning", "back": "on 25th Saturday" },
+      { "front": "See you later", "back": "at Colombo" }
+    ]
+  },
+  {
+    "name": "MIT 216 - Human Computer Interaction",
+    "cards": [
+      { "front": "Stil uploading..", "back": "Wiat.." },
+      { "front": "Still uploading...", "back": "Wait" },
+      { "front": "Thank you", "back": "For visiting" },
+      { "front": "Hard Working", "back": "Wait..." }
+    ]
+  }
+]

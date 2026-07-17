@@ -1,0 +1,66 @@
+
+[
+  {
+    "name": "English Audio",
+    "items": [
+      {
+        "title": "MIT 212 - Lecture 01 & 02 - English",
+        "description": "English explanation for MIT 212 Lectures 1 and 2.",
+        "file": "audio/Lec-01-02-mit212-english.m4a"
+      },
+      {
+        "title": "MIT 212 - Lecture 03 & 04 - English",
+        "description": "English explanation for MIT 212 Lectures 3 and 4.",
+        "file": "audio/LEC 3 & 4 Python_List_Logic_and_Git_Merges.m4a"
+      },
+      {
+        "title": "MIT 212 - Lecture 05, 06, & 07 - English",
+        "description": "English explanation for MIT 212 Lectures 5, 6 and 7.",
+        "file": "audio/Lec 5, 6 & 7 MIT 212 English.m4a"
+      },
+      {
+        "title": "MIT 212 - Lecture 08, 09, & 10 - English",
+        "description": "English explanation for MIT 212 Lectures 8, 9 and 10.",
+        "file": "audio/Lec 8, 9 & 10 MIT 212 English.m4a"
+      },
+       {
+        "title": "MIT 212 - Lecture 11 & 12 - English",
+        "description": "English explanation for MIT 212 Lectures 11 and 12.",
+        "file": "audio/Lec 11 & 12 MIT 212 English.m4a"
+      }
+
+
+    ]
+  },
+  {
+    "name": "Sinhala Audio",
+    "items": [
+      {
+        "title": "MIT 212 - Lecture 01 & 02 - සිංහල",
+        "description": "Sinhala explanation for MIT 212 Lectures 1 and 2.",
+        "file": "audio/Lec 1 & 2 MIT 212 Sinhala.m4a"
+      },
+      {
+        "title": "MIT 212 - Lecture 03 & 04 - සිංහල",
+        "description": "Sinhala explanation for MIT 212 Lectures 3 and 4.",
+        "file": "audio/Lec 3 & 4 Sinhala Python_List_Logic_and_Git_Merges.m4a"
+      },
+      {
+        "title": "MIT 212 - Lecture 05, 06, & 07 - සිංහල",
+        "description": "Sinhala explanation for MIT 212 Lectures 5, 6 and 7.",
+        "file": "audio/Lec 5, 6 & 7 MIT 212 Sinhala.m4a"
+      },
+      {
+        "title": "MIT 212 - Lecture 08, 09, & 10 - සිංහල",
+        "description": "Sinhala explanation for MIT 212 Lectures 8, 9 and 10.",
+        "file": "audio/Lec 8, 9 & 10 MIT 212 Sinhala.m4a"
+      },
+       {
+        "title": "MIT 212 - Lecture 11 & 12 - සිංහල",
+        "description": "Sinhala explanation for MIT 212 Lectures 11 and 12.",
+        "file": "audio/Lec 1 & 2 MIT 212 Sinhala.m4a"
+      }
+
+    ]
+  }
+]

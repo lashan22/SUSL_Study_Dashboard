@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Materials — Study Hub</title>
+
+    <!-- style.css is in the same main folder -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Decorative background elements -->
+    <div class="stars"></div>
+    <div class="stars2"></div>
+    <div class="stars3"></div>
+
+    <div class="blobs">
+        <span class="blob b1"></span>
+        <span class="blob b2"></span>
+        <span class="blob b3"></span>
+        <span class="blob b4"></span>
+    </div>
+
+    <!-- Header -->
+    <header class="site-header">
+
+        <div class="wrap">
+
+            <a class="brand" href="index.html">
+                📚 Study Hub
+            </a>
+
+            <nav class="nav">
+
+                <a href="index.html">
+                    <span class="ico">🏠</span>
+                    Home
+                </a>
+
+                <a href="flashcards.html">
+                    <span class="ico">🧠</span>
+                    Flashcards
+                </a>
+
+                <a href="audio.html">
+                    <span class="ico">🎧</span>
+                    Audio
+                </a>
+
+                <a href="materials.html"
+                   class="active">
+
+                    <span class="ico">📄</span>
+                    Materials
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+    <!-- Main content -->
+    <main class="wrap">
+
+        <h1>Study Materials</h1>
+
+        <p class="lead">
+            PDFs, slides and useful links.
+            Add files to
+            <code>material/</code>
+            and list them in
+            <code>data/materials.json</code>.
+        </p>
+
+        <!-- JavaScript inserts material cards here -->
+        <div class="materials-grid"
+             id="materials-grid">
+
+            <p>Loading study materials...</p>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+
+        <div class="wrap">
+            <p>Built with GitHub Pages</p>
+        </div>
+
+    </footer>
+
+    <!-- app.js is in the same main folder -->
+    <script src="app.js"></script>
+
+        <script>
+            document.addEventListener(
+                "DOMContentLoaded",
+                function () {
+                    if (
+                        window.StudyHub &&
+                        typeof window.StudyHub.renderMaterials === "function"
+                    ) {
+                        window.StudyHub.renderMaterials();
+                    } else {
+                        document.getElementById(
+                            "materials-grid"
+                        ).innerHTML = `
+                            <p class="error">
+                                Unable to load app.js.
+                            </p>
+                        `;
+                    }
+                }
+            );
+
+        </script>
+
+</body>
+
+</html>
