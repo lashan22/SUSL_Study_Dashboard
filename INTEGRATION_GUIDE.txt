@@ -1,0 +1,156 @@
+SUSL MIT STUDY DASHBOARD
+FIREBASE LOGIN AND LOGIN-REPORT SETUP
+=====================================
+
+FILES INCLUDED
+--------------
+1. login.html
+2. firebase-config.js
+3. auth.js
+4. auth-guard.js
+5. admin.html
+6. admin.js
+7. auth-styles.css
+8. firestore.rules
+9. protected-header-snippet.html
+
+PART A — COPY THE FILES
+-----------------------
+Copy all included files into the main Study_Dashboard folder.
+
+Study_Dashboard/
+├── index.html
+├── flashcards.html
+├── audio.html
+├── materials.html
+├── style.css
+├── app.js
+├── login.html
+├── firebase-config.js
+├── auth.js
+├── auth-guard.js
+├── admin.html
+├── admin.js
+├── auth-styles.css
+├── firestore.rules
+├── data/
+├── audio/
+└── material/
+
+PART B — CREATE THE FIREBASE PROJECT
+------------------------------------
+1. Open Firebase Console.
+2. Click Create a project.
+3. Use a project name such as SUSL-MIT-Study-Dashboard.
+4. Open Project settings.
+5. Under Your apps, select the Web icon </>.
+6. Register a web app.
+7. Firebase shows a firebaseConfig object.
+8. Copy its values into firebase-config.js.
+
+PART C — SET THE ADMIN EMAIL
+----------------------------
+Open firebase-config.js and replace:
+
+PASTE_YOUR_ADMIN_EMAIL@gmail.com
+
+with the Google email address that only you will use for admin.html.
+
+Open firestore.rules and replace the same placeholder with exactly
+that same email address.
+
+PART D — ENABLE GOOGLE SIGN-IN
+------------------------------
+1. Firebase Console -> Authentication.
+2. Click Get started.
+3. Open Sign-in method.
+4. Select Google.
+5. Enable Google.
+6. Select a support email.
+7. Save.
+
+PART E — AUTHORIZE THE WEBSITE DOMAIN
+-------------------------------------
+Firebase Console -> Authentication -> Settings -> Authorized domains.
+
+Make sure these are present:
+
+localhost
+lashan22.github.io
+
+Use your real GitHub Pages domain if it is different.
+
+PART F — CREATE CLOUD FIRESTORE
+-------------------------------
+1. Firebase Console -> Firestore Database.
+2. Click Create database.
+3. Select a location.
+4. Create the database.
+5. Open the Firestore Rules tab.
+6. Copy all content from firestore.rules.
+7. Paste it into Firebase rules.
+8. Click Publish.
+
+PART G — PROTECT EXISTING PAGES
+-------------------------------
+Add these two lines inside the <head> of:
+index.html
+flashcards.html
+audio.html
+materials.html
+
+<link rel="stylesheet" href="auth-styles.css">
+<script type="module" src="auth-guard.js"></script>
+
+PART H — ADD USER DETAILS AND LOGOUT
+------------------------------------
+Open protected-header-snippet.html.
+Copy its user-area block into the header of the same four pages.
+
+PART I — ADMIN REPORT PAGE
+--------------------------
+The report page is admin.html.
+Only the configured ADMIN_EMAIL can read all login data.
+
+Open locally:
+http://127.0.0.1:5500/admin.html
+
+GitHub Pages example:
+https://lashan22.github.io/SUSL_Study_Dashboard/admin.html
+
+PART J — TEST LOCALLY
+---------------------
+Use VS Code Live Server. Do not use file:///.
+
+Open:
+http://127.0.0.1:5500/login.html
+
+Test:
+1. Google sign-in.
+2. Redirect to index.html.
+3. User name/email/photo in the header.
+4. Sign Out.
+5. Sign in several times.
+6. Open admin.html using the admin account.
+7. Confirm Registered Users, Total Logins, Today's Logins,
+   and Recent Login Activity.
+
+PART K — PUSH FILES
+-------------------
+Run in Git Bash inside Study_Dashboard:
+
+git add login.html firebase-config.js auth.js auth-guard.js admin.html admin.js auth-styles.css firestore.rules protected-header-snippet.html
+
+git add index.html flashcards.html audio.html materials.html
+
+git commit -m "Add Firebase login and login reports"
+
+git push
+
+SECURITY NOTES
+--------------
+1. Never store passwords in HTML, JavaScript, or JSON.
+2. Google/Firebase handles the password.
+3. Publish the Firestore Security Rules.
+4. Use the same admin email in firebase-config.js and firestore.rules.
+5. Login events are recorded only after successful Google sign-in.

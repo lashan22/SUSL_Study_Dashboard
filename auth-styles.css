@@ -1,0 +1,319 @@
+/* Authentication and admin additions for the SUSL MIT Study Dashboard. */
+
+.auth-checking body {
+  visibility: hidden;
+}
+
+.login-page {
+  min-height: 100vh;
+}
+
+.login-shell {
+  min-height: 100vh;
+  width: min(100% - 32px, 760px);
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+  padding: 40px 0;
+}
+
+.login-card {
+  width: 100%;
+  padding: clamp(30px, 6vw, 58px);
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  text-align: center;
+  background: linear-gradient(145deg, rgba(255,255,255,.09), rgba(255,255,255,.035));
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.08), 0 35px 90px rgba(0,0,0,.5);
+}
+
+.login-logo {
+  width: 82px;
+  height: 82px;
+  margin: 0 auto 20px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  font-size: 2.35rem;
+  background: linear-gradient(135deg, rgba(139,92,246,.34), rgba(236,72,153,.3));
+  box-shadow: var(--glow);
+}
+
+.login-eyebrow,
+.admin-eyebrow {
+  margin: 0 0 8px;
+  color: #d8b4fe;
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.login-card h1 {
+  margin: 0;
+  font-size: clamp(2rem, 6vw, 3.4rem);
+  line-height: 1.15;
+}
+
+.login-description {
+  max-width: 590px;
+  margin: 20px auto 30px;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+.google-login-button,
+.secondary-button,
+.logout-button {
+  border: 0;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform .18s ease, opacity .18s ease, box-shadow .18s ease;
+}
+
+.google-login-button {
+  width: min(100%, 390px);
+  min-height: 58px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  padding: 13px 22px;
+  border-radius: 16px;
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  box-shadow: 0 14px 36px rgba(236,72,153,.32);
+}
+
+.google-mark {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #4285f4;
+  background: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.google-login-button:hover,
+.secondary-button:hover,
+.logout-button:hover {
+  transform: translateY(-2px);
+}
+
+.google-login-button:disabled,
+.secondary-button:disabled,
+.logout-button:disabled {
+  opacity: .6;
+  cursor: wait;
+  transform: none;
+}
+
+.auth-message {
+  min-height: 27px;
+  margin: 20px 0 0;
+  color: var(--muted);
+  font-size: .92rem;
+}
+
+.auth-message.success { color: #86efac; }
+.auth-message.error { color: #fda4af; }
+
+.login-note {
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: .78rem;
+}
+
+.user-area,
+.admin-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-area {
+  padding-left: 10px;
+}
+
+.user-details,
+.admin-user > div {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+}
+
+.user-details strong,
+.admin-user strong {
+  color: #fff;
+  font-size: .85rem;
+}
+
+.user-details span,
+.admin-user span {
+  color: var(--muted);
+  font-size: .72rem;
+}
+
+.user-avatar {
+  width: 38px;
+  height: 38px;
+  border: 2px solid rgba(255,255,255,.18);
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.logout-button,
+.secondary-button {
+  min-height: 40px;
+  padding: 9px 15px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: #fff;
+  background: var(--surface-2);
+}
+
+.admin-main {
+  padding-top: 50px;
+}
+
+.admin-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.admin-heading h1 {
+  margin-bottom: 10px;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+}
+
+.admin-user {
+  flex: 0 0 auto;
+  padding: 14px 18px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.stat-card {
+  min-height: 180px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  backdrop-filter: blur(12px);
+  box-shadow: var(--shadow);
+}
+
+.stat-icon { font-size: 1.8rem; }
+
+.stat-label {
+  margin-top: 13px;
+  color: var(--muted);
+  font-size: .88rem;
+}
+
+.stat-card strong {
+  margin-top: 4px;
+  color: #fff;
+  font-size: 2.6rem;
+  line-height: 1.1;
+}
+
+.report-panel {
+  margin-bottom: 55px;
+  padding: 26px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  backdrop-filter: blur(12px);
+  box-shadow: var(--shadow);
+}
+
+.report-panel-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 22px;
+}
+
+.report-panel-heading h2 { margin: 0; }
+
+.report-panel-heading p {
+  margin: 5px 0 0;
+  color: var(--muted);
+}
+
+.table-scroll { overflow-x: auto; }
+
+.login-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 720px;
+}
+
+.login-table th,
+.login-table td {
+  padding: 15px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+}
+
+.login-table th {
+  color: #fff;
+  font-size: .82rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.login-table td {
+  color: var(--muted);
+  font-size: .9rem;
+}
+
+.login-table tbody tr:hover {
+  background: rgba(255,255,255,.035);
+}
+
+@media (max-width: 900px) {
+  .stats-grid { grid-template-columns: 1fr; }
+  .admin-heading { flex-direction: column; }
+}
+
+@media (max-width: 760px) {
+  .user-area {
+    width: 100%;
+    justify-content: space-between;
+    padding: 8px 0 0;
+  }
+
+  .login-card { border-radius: 22px; }
+
+  .report-panel-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

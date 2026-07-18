@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In | SUSL MIT Study Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="auth-styles.css">
+</head>
+<body class="login-page">
+
+  <div class="stars"></div>
+  <div class="stars2"></div>
+  <div class="stars3"></div>
+
+  <div class="blobs">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+    <div class="blob b4"></div>
+  </div>
+
+  <main class="login-shell">
+    <section class="login-card" aria-labelledby="login-title">
+      <div class="login-logo" aria-hidden="true">📚</div>
+      <p class="login-eyebrow">Secure Student Access</p>
+      <h1 id="login-title">SUSL MIT Study Dashboard</h1>
+      <p class="login-description">
+        Sign in with your Google account to access flashcards,
+        bilingual audio lessons, and organized study materials.
+      </p>
+
+      <button id="google-login-button" class="google-login-button" type="button">
+        <span class="google-mark" aria-hidden="true">G</span>
+        <span>Continue with Google</span>
+      </button>
+
+      <p id="login-message" class="auth-message" role="status" aria-live="polite"></p>
+      <p class="login-note">
+        Your password is handled by Google and is never stored in this website.
+      </p>
+    </section>
+  </main>
+
+  <script type="module" src="auth.js"></script>
+</body>
+</html>

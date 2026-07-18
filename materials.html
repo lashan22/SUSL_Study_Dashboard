@@ -11,6 +11,12 @@
 
     <!-- style.css is in the same main folder -->
     <link rel="stylesheet" href="style.css">
+
+    <script
+        type="module"
+        src="auth-guard.js">
+    </script>
+
 </head>
 
 <body>
@@ -37,29 +43,10 @@
             </a>
 
             <nav class="nav">
-
-                <a href="index.html">
-                    <span class="ico">🏠</span>
-                    Home
-                </a>
-
-                <a href="flashcards.html">
-                    <span class="ico">🧠</span>
-                    Flashcards
-                </a>
-
-                <a href="audio.html">
-                    <span class="ico">🎧</span>
-                    Audio
-                </a>
-
-                <a href="materials.html"
-                   class="active">
-
-                    <span class="ico">📄</span>
-                    Materials
-                </a>
-
+             <a href="index.html">🏠 Home</a>
+             <a href="flashcards.html">🧠 Flashcards</a>
+             <a href="audio.html">🎧 Audio Lessons</a>
+             <a href="materials.html" class="active">📄 Study Materials</a>
             </nav>
 
         </div>
@@ -72,11 +59,8 @@
         <h1>Study Materials</h1>
 
         <p class="lead">
-            PDFs, slides and useful links.
-            Add files to
-            <code>material/</code>
-            and list them in
-            <code>data/materials.json</code>.
+            Explore lecture notes, revision guides, question banks,
+            and other academic resources organized to support your studies.
         </p>
 
         <!-- JavaScript inserts material cards here -->
@@ -91,11 +75,12 @@
 
     <!-- Footer -->
     <footer class="site-footer">
-
-        <div class="wrap">
-            <p>Built with GitHub Pages</p>
-        </div>
-
+      <div class="wrap">
+      <p>
+        © 2026 SUSL MIT Study Dashboard.
+        Developed for educational purposes.
+      </p>
+      </div>
     </footer>
 
     <!-- app.js is in the same main folder -->

@@ -12,6 +12,12 @@
 
     <!-- style.css is in the main folder -->
     <link rel="stylesheet" href="style.css">
+
+    <script
+        type="module"
+        src="auth-guard.js">
+    </script>
+
 </head>
 
 <body>
@@ -37,29 +43,10 @@
             </a>
 
             <nav class="nav">
-
-                <a href="index.html">
-                    <span class="ico">🏠</span>
-                    Home
-                </a>
-
-                <a href="flashcards.html"
-                   class="active">
-
-                    <span class="ico">🧠</span>
-                    Flashcards
-                </a>
-
-                <a href="audio.html">
-                    <span class="ico">🎧</span>
-                    Audio
-                </a>
-
-                <a href="materials.html">
-                    <span class="ico">📄</span>
-                    Materials
-                </a>
-
+             <a href="index.html">🏠 Home</a>
+             <a href="flashcards.html" class="active">🧠 Flashcards</a>
+             <a href="audio.html">🎧 Audio Lessons</a>
+             <a href="materials.html">📄 Study Materials</a>
             </nav>
 
         </div>
@@ -68,11 +55,11 @@
 
     <main class="wrap">
 
-        <h1>Flashcards</h1>
+        <h1>Interactive Flashcards</h1>
 
-        <p>
-            Click a flashcard to see the answer.
-            Click it again to return to the question.
+        <p class="lead">
+            Select a subject and click each card to reveal the answer.
+            Use the flashcards to test your knowledge and improve recall.
         </p>
 
         <!-- Subject/deck buttons appear here -->
@@ -86,11 +73,12 @@
     </main>
 
     <footer class="site-footer">
-
-        <div class="wrap">
-            <p>Built with GitHub Pages</p>
-        </div>
-
+      <div class="wrap">
+       <p>
+        © 2026 SUSL MIT Study Dashboard.
+        Developed for educational purposes.
+       </p>
+      </div>
     </footer>
 
     <!-- app.js is in the main folder -->

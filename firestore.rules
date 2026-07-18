@@ -1,0 +1,56 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function isAdmin() {
+      return signedIn()
+        && request.auth.token.email
+          == "abl4488@gmail.com";
+    }
+
+    match /users/{userId} {
+      allow create: if signedIn()
+        && request.auth.uid == userId
+        && request.resource.data.uid == request.auth.uid
+        && request.resource.data.email == request.auth.token.email
+        && request.resource.data.loginCount == 1
+        && request.resource.data.createdAt == request.time
+        && request.resource.data.lastLoginAt == request.time;
+
+      allow update: if signedIn()
+        && request.auth.uid == userId
+        && request.resource.data.uid == request.auth.uid
+        && request.resource.data.email == request.auth.token.email
+        && request.resource.data.loginCount == resource.data.loginCount + 1
+        && request.resource.data.lastLoginAt == request.time
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly([
+          "name",
+          "email",
+          "photoURL",
+          "lastLoginAt",
+          "loginCount"
+        ]);
+
+      allow read: if signedIn()
+        && (request.auth.uid == userId || isAdmin());
+
+      allow delete: if false;
+    }
+
+    match /loginEvents/{eventId} {
+      allow create: if signedIn()
+        && request.resource.data.uid == request.auth.uid
+        && request.resource.data.email == request.auth.token.email
+        && request.resource.data.provider == "google"
+        && request.resource.data.loginAt == request.time;
+
+      allow read: if isAdmin();
+      allow update, delete: if false;
+    }
+  }
+}

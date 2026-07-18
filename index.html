@@ -64,16 +64,22 @@
     </style>
 
   <link rel="stylesheet" href="style.css" />
+
+  <script
+    type="module"
+    src="auth-guard.js">
+    </script>
+
 </head>
 <body>
   <header class="site-header">
     <div class="wrap">
       <a class="brand" href="index.html">📚 Study Hub</a>
       <nav class="nav">
-        <a href="index.html" class="active">Home</a>
-        <a href="flashcards.html">Flashcards</a>
-        <a href="audio.html">Audio</a>
-        <a href="materials.html">Materials</a>
+        <a href="index.html" class="active">🏠 Home</a>
+        <a href="flashcards.html">🧠 Flashcards</a>
+        <a href="audio.html">🎧 Audio Lessons</a>
+        <a href="materials.html">📄 Study Materials</a>
       </nav>
     </div>
   </header>
@@ -81,106 +87,92 @@
   <main class="wrap">
     <section class="hero">
       <h1>SUSL MIT Study Dashboard</h1>
-      <p class="lead">A shareable dashboard for flashcards, audio lessons, and study materials.
-        Everything lives in this repo — edit the JSON files in <code>data/</code> to add your own content.</p>
+      <p class="lead">A centralized learning portal for MIT students to access
+    interactive flashcards, bilingual audio lessons, and
+    carefully organized study materials.</p>
     </section>
  
     <section class="cards" id="dashboard-cards">
 
-    <!-- Flashcards Card -->
-    <a class="card" href="flashcards.html">
+  <a class="card" href="flashcards.html">
+    <div class="card-icon">🧠</div>
 
-        <div class="card-icon">🧠</div>
+    <h2>Flashcards</h2>
 
-        <h2>Flashcards</h2>
+    <p>
+      Review key concepts and strengthen your knowledge
+      through interactive subject-based flashcards.
+    </p>
 
-        <p>
-            Flip-card decks to test recall.
-        </p>
+    <span class="count" data-count="flashcards">—</span>
+  </a>
 
-        <span class="count"
-              data-count="flashcards">
-            —
-        </span>
-
-    </a>
-
-    <!-- Audio Card -->
     <a class="card" href="audio.html">
-
         <div class="card-icon">🎧</div>
 
-        <h2>Audio</h2>
+        <h2>Audio Lessons</h2>
 
-        <p>
-            Listen to recorded lessons and notes.
-        </p>
+            <p>
+                Listen to English and Sinhala audio explanations
+                covering important lessons and subject areas.
+            </p>
 
-        <span class="count"
-              data-count="audio">
-            —
-        </span>
+            <span class="count" data-count="audio">—</span>
+        </a>
 
-    </a>
+        <a class="card" href="materials.html">
+            <div class="card-icon">📄</div>
 
-    <!-- Materials Card -->
-    <a class="card" href="materials.html">
+            <h2>Study Materials</h2>
 
-        <div class="card-icon">📄</div>
+            <p>
+                Access lecture notes, question banks, revision guides,
+                and other useful academic resources.
+            </p>
 
-        <h2>Materials</h2>
-
-        <p>
-            PDFs, slides, and reference docs.
-        </p>
-
-        <span class="count"
-              data-count="materials">
-            —
-        </span>
-
-    </a>
+            <span class="count" data-count="materials">—</span>
+        </a>
 
     </section>
  
     <section class="howto">
 
-    <h2>How to add your own content</h2>
+        <h2>About This Learning Portal</h2>
 
-    <ol>
-        <li>
-            Add flashcards by editing
-            <code>data/flashcards.json</code>.
-        </li>
+        <p>
+            The SUSL MIT Study Dashboard has been developed to support
+            students by bringing essential learning resources together
+            in one convenient location.
+        </p>
 
-        <li>
-            Drop audio files into
-            <code>audio/</code>
-            and list them in
-            <code>data/audio.json</code>.
-        </li>
+        <ul>
+            <li>
+                Revise important concepts using interactive flashcards.
+            </li>
 
-        <li>
-            Drop PDFs and images into
-            <code>material/</code>
-            and list them in
-            <code>data/materials.json</code>.
-        </li>
+            <li>
+                Listen to lesson explanations in English and Sinhala.
+            </li>
 
-        <li>
-            Commit &amp; push — GitHub Pages updates automatically.
-            Share your link!
-        </li>
-    </ol>
+            <li>
+                Access organized study notes, question banks, and
+                examination preparation materials.
+            </li>
+        </ul>
 
-</section>
+    </section>
+
+
   </main>
  
   <footer class="site-footer">
     <div class="wrap">
-      <p>Built with GitHub Pages · <a href="https://github.com" id="repo-link">View on GitHub</a></p>
-    </div>
-  </footer>
+      <p>
+       © 2026 SUSL MIT Study Dashboard.
+       Developed for educational purposes.
+      </p>
+     </div>
+    </footer>
  
   <script src="app.js"></script>
   <script>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Reports | SUSL MIT Study Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="auth-styles.css">
+</head>
+<body class="admin-page">
+
+  <div class="stars"></div>
+  <div class="stars2"></div>
+  <div class="stars3"></div>
+
+  <div class="blobs">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+    <div class="blob b4"></div>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">📚 SUSL MIT Study Dashboard</a>
+      <nav class="nav">
+        <a href="index.html">🏠 Home</a>
+        <button class="logout-button" type="button" data-logout>Sign Out</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap admin-main">
+    <section class="admin-heading">
+      <div>
+        <p class="admin-eyebrow">Administration</p>
+        <h1>Login Reports</h1>
+        <p class="lead">
+          Review registered users, successful logins, and recent access activity.
+        </p>
+      </div>
+
+      <div class="admin-user">
+        <img class="user-avatar" data-user-photo alt="" hidden>
+        <div>
+          <strong data-user-name>Administrator</strong>
+          <span data-user-email></span>
+        </div>
+      </div>
+    </section>
+
+    <p id="admin-message" class="auth-message" role="status" aria-live="polite">
+      Loading login reports...
+    </p>
+
+    <section class="stats-grid" aria-label="Login statistics">
+      <article class="stat-card">
+        <span class="stat-icon" aria-hidden="true">👥</span>
+        <span class="stat-label">Registered Users</span>
+        <strong id="registered-users-count">—</strong>
+      </article>
+
+      <article class="stat-card">
+        <span class="stat-icon" aria-hidden="true">🔐</span>
+        <span class="stat-label">Total Successful Logins</span>
+        <strong id="total-logins-count">—</strong>
+      </article>
+
+      <article class="stat-card">
+        <span class="stat-icon" aria-hidden="true">📅</span>
+        <span class="stat-label">Today's Logins</span>
+        <strong id="today-logins-count">—</strong>
+      </article>
+    </section>
+
+    <section class="report-panel">
+      <div class="report-panel-heading">
+        <div>
+          <h2>Recent Login Activity</h2>
+          <p>The latest 100 successful login events.</p>
+        </div>
+        <button id="refresh-reports" class="secondary-button" type="button">Refresh</button>
+      </div>
+
+      <div class="table-scroll">
+        <table class="login-table">
+          <thead>
+            <tr>
+              <th scope="col">User</th>
+              <th scope="col">Email</th>
+              <th scope="col">Provider</th>
+              <th scope="col">Login Date and Time</th>
+            </tr>
+          </thead>
+          <tbody id="login-table-body">
+            <tr><td colspan="4">Loading...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="admin.js"></script>
+</body>
+</html>

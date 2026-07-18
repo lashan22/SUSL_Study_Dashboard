@@ -11,6 +11,11 @@
     <title>Audio Lessons — Study Hub</title>
 
     <link rel="stylesheet" href="style.css">
+    <script
+        type="module"
+        src="auth-guard.js">
+    </script>
+
 </head>
 
 <body>
@@ -23,10 +28,10 @@
             </a>
 
             <nav class="nav">
-                <a href="index.html">Home</a>
-                <a href="flashcards.html">Flashcards</a>
-                <a href="audio.html" class="active">Audio</a>
-                <a href="materials.html">Materials</a>
+              <a href="index.html">🏠 Home</a>
+              <a href="flashcards.html">🧠 Flashcards</a>
+              <a href="audio.html" class="active">🎧 Audio Lessons</a>
+              <a href="materials.html">📄 Study Materials</a>
             </nav>
 
         </div>
@@ -37,7 +42,8 @@
         <h1>Audio Lessons</h1>
 
         <p class="lead">
-            Select English or Sinhala audio lessons.
+            Select a language and listen to clear audio explanations
+            prepared to support your understanding and revision.
         </p>
         <div
             class="deck-picker"
@@ -49,7 +55,14 @@
         </div>
 
     </main>
-
+    <footer class="site-footer">
+      <div class="wrap">
+       <p>
+        © 2026 SUSL MIT Study Dashboard.
+        Developed for educational purposes.
+       </p>
+      </div>
+    </footer>
     <script src="app.js"></script>
 
     <script>
